@@ -335,8 +335,9 @@ body {
 /* POINTS TEXT */
 /* POINTS PROGRESS MODULE */
 .points-progress-module {
-  margin-top: 26px;
-  padding-bottom: 12px;
+  margin-top: 18px;
+  padding-bottom: 22px;
+  transform: translateY(-10px);
 }
 
 .points-progress-header {
@@ -2548,4 +2549,103 @@ body {
 
 .otp-feedback.error {
   background: #c93b2d;
+}
+
+
+
+/* RESPONSIVE FIX FOR SMALL MOBILE SCREENS */
+@media (max-width: 390px) {
+  .app-screen {
+    padding: 20px 14px 120px;
+  }
+
+  .home-header {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .home-header h1 {
+    font-size: clamp(38px, 14vw, 56px);
+    line-height: 0.98;
+    letter-spacing: -2px;
+  }
+
+  .small-greeting {
+    font-size: 13px;
+  }
+
+  .header-icons {
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .points-preview-button {
+    height: 42px;
+    padding: 0 12px 0 10px;
+  }
+
+  .icon-button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .points-card {
+    border-radius: 26px;
+    padding: 20px;
+  }
+
+  .card-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .points-card h2 {
+    font-size: 42px;
+  }
+
+  .points-card h2 span {
+    font-size: 19px;
+  }
+
+  .points-progress-module {
+    margin-top: 22px;
+  }
+
+  .points-progress-header {
+    margin-bottom: 12px;
+  }
+
+  .points-progress-header p {
+    font-size: 13px;
+  }
+
+  .progress-pita {
+    font-size: 34px;
+  }
+
+  .progress-percent {
+    bottom: 34px;
+    font-size: 10px;
+    padding: 5px 7px;
+  }
+
+  .points-left-label {
+    right: 12px;
+    font-size: 8px;
+  }
+
+  .section-header h2 {
+    font-size: 27px;
+    line-height: 1.05;
+  }
+
+  .section-header button {
+    font-size: 14px;
+  }
+
+  .promo-card {
+    min-width: 245px;
+    max-width: 245px;
+  }
 }
