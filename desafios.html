@@ -1,0 +1,441 @@
+ <!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Desafios | Joshua's Shoarma</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="app-screen challenges-screen">
+
+    <!-- CHALLENGES HEADER -->
+    <section class="challenges-header">
+      <div>
+        <h1>Desafios</h1>
+        <p>Completa desafios, ganha recompensas</p>
+      </div>
+
+      <div class="challenges-header-icon">
+        🏆
+      </div>
+    </section>
+
+    <!-- MEMBER LEVEL CARD -->
+    <section class="member-level-card">
+      <div class="member-level-top">
+        <div class="level-badge">
+          🥉
+        </div>
+
+        <div>
+          <h2>Membro Bronze</h2>
+          <p>350 pontos totais</p>
+        </div>
+      </div>
+
+      <div class="level-progress-info">
+        <span>Progresso para prata</span>
+        <strong>Faltam 650 pts</strong>
+      </div>
+
+      <div class="level-progress-bar">
+        <div class="level-progress-fill"></div>
+      </div>
+    </section>
+
+    <!-- TABS -->
+    <section class="challenge-tabs">
+      <button class="challenge-tab active" data-tab="activeChallenges">
+        Ativos (4)
+      </button>
+
+      <button class="challenge-tab" data-tab="completedChallenges">
+        Concluídos (2)
+      </button>
+    </section>
+
+    <!-- ACTIVE CHALLENGES -->
+    <section class="challenge-list active" id="activeChallenges">
+
+      <article class="challenge-card easy">
+        <div class="challenge-icon">🎯</div>
+
+        <div class="challenge-content">
+          <div class="challenge-title-row">
+            <h3>Pita Lovers</h3>
+            <span class="difficulty-pill">easy</span>
+          </div>
+
+          <p>Pede 5 menus Pita ou Wrap diferentes para ganhar pontos de bónus.</p>
+
+          <div class="challenge-progress-row">
+            <span>2 / 5</span>
+            <span>40%</span>
+          </div>
+
+          <div class="challenge-progress-bar">
+            <div style="width: 40%;"></div>
+          </div>
+
+          <div class="challenge-reward">
+            <strong>🎁 +250 pts</strong>
+            <span>Grátis uma Pita à tua escolha</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="challenge-card medium">
+        <div class="challenge-icon">📍</div>
+
+        <div class="challenge-content">
+          <div class="challenge-title-row">
+            <h3>Joshua’s Lover</h3>
+            <span class="difficulty-pill">medium</span>
+          </div>
+
+          <p>Visita-nos 7 vezes este mês e desbloqueia um bónus especial.</p>
+
+          <div class="challenge-deadline">Faltam 12 dias</div>
+
+          <div class="challenge-progress-row">
+            <span>3 / 7</span>
+            <span>43%</span>
+          </div>
+
+          <div class="challenge-progress-bar">
+            <div style="width: 43%;"></div>
+          </div>
+
+          <div class="challenge-reward">
+            <strong>🎁 +500 pts</strong>
+            <span>Bónus de subida de nível</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="challenge-card hard">
+        <div class="challenge-icon">🔥</div>
+
+        <div class="challenge-content">
+          <div class="challenge-title-row">
+            <h3>Big Joshua</h3>
+            <span class="difficulty-pill">hard</span>
+          </div>
+
+          <p>Faz 15 refeições em 15 dias diferentes nos nossos restaurantes.</p>
+
+          <div class="challenge-deadline">Faltam 25 dias</div>
+
+          <div class="challenge-progress-row">
+            <span>4 / 15</span>
+            <span>27%</span>
+          </div>
+
+          <div class="challenge-progress-bar">
+            <div style="width: 27%;"></div>
+          </div>
+
+          <div class="challenge-reward">
+            <strong>🎁 +1000 pts</strong>
+            <span>Menu grátis à tua escolha</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="challenge-card easy">
+        <div class="challenge-icon">🥙</div>
+
+        <div class="challenge-content">
+          <div class="challenge-title-row">
+            <h3>Experimenta algo novo</h3>
+            <span class="difficulty-pill">easy</span>
+          </div>
+
+          <p>Faz o teu pedido em 3 categorias diferentes do menu.</p>
+
+          <div class="challenge-progress-row">
+            <span>1 / 3</span>
+            <span>33%</span>
+          </div>
+
+          <div class="challenge-progress-bar">
+            <div style="width: 33%;"></div>
+          </div>
+
+          <div class="challenge-reward">
+            <strong>🎁 +150 pts</strong>
+            <span>Recompensa surpresa</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- COMPLETED CHALLENGES -->
+    <section class="challenge-list" id="completedChallenges">
+
+      <article class="challenge-card completed">
+        <div class="challenge-icon">✅</div>
+
+        <div class="challenge-content">
+          <div class="challenge-title-row">
+            <h3>Primeira Mordida</h3>
+            <span class="difficulty-pill">done</span>
+          </div>
+
+          <p>Fizeste o teu primeiro pedido com a Joshua’s Lover Card.</p>
+
+          <div class="challenge-progress-row">
+            <span>1 / 1</span>
+            <span>100%</span>
+          </div>
+
+          <div class="challenge-progress-bar">
+            <div style="width: 100%;"></div>
+          </div>
+
+          <div class="challenge-reward">
+            <strong>🎁 +100 pts</strong>
+            <span>Recompensa recebida</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="challenge-card completed">
+        <div class="challenge-icon">⭐</div>
+
+        <div class="challenge-content">
+          <div class="challenge-title-row">
+            <h3>Menu Favorito</h3>
+            <span class="difficulty-pill">done</span>
+          </div>
+
+          <p>Pediste o mesmo menu 3 vezes. Já tens um favorito.</p>
+
+          <div class="challenge-progress-row">
+            <span>3 / 3</span>
+            <span>100%</span>
+          </div>
+
+          <div class="challenge-progress-bar">
+            <div style="width: 100%;"></div>
+          </div>
+
+          <div class="challenge-reward">
+            <strong>🎁 +200 pts</strong>
+            <span>Recompensa recebida</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- FLOATING QR BUTTON -->
+  <!-- FLOATING LOVER CARD -->
+<button class="floating-lover-card expanded" id="loverCardWidget" aria-label="Abrir Joshua's Lover Card">
+  <span class="widget-card-icon">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+      <path d="M7 10H10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M7 14H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </span>
+
+  <span class="widget-qr-icon">
+    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+      <rect x="2" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/>
+      <rect x="17" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/>
+      <rect x="2" y="17" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/>
+      <rect x="11" y="11" width="2.5" height="2.5" fill="currentColor"/>
+      <rect x="15" y="11" width="2.5" height="2.5" fill="currentColor"/>
+      <rect x="11" y="15" width="2.5" height="2.5" fill="currentColor"/>
+      <rect x="18" y="15" width="2.5" height="2.5" fill="currentColor"/>
+      <rect x="15" y="18" width="2.5" height="2.5" fill="currentColor"/>
+    </svg>
+  </span>
+
+  <span class="lover-card-label">Joshua’s Lover Card</span>
+  <span class="lover-card-divider"></span>
+  <span class="lover-card-arrow">⌃</span>
+</button>
+
+  <!-- LOVER CARD MODAL -->
+  <div class="lover-card-modal" id="loverCardModal">
+    <div class="lover-card-modal-screen">
+      <button class="lover-card-back" id="closeLoverCard">← Voltar</button>
+
+      <div class="lover-card-modal-header">
+        <div class="lover-card-modal-emoji">🥙</div>
+        <h2>Joshua’s Lover Card</h2>
+        <p>Mostre isto ao caixa para ganhar pontos</p>
+      </div>
+
+      <div class="lover-card-pass">
+        <h3>Mark</h3>
+        <p class="lover-card-tier">Joshua’s Lover</p>
+
+        <div class="lover-card-qr-frame">
+          <div class="lover-card-qr-box">
+            <svg width="210" height="210" viewBox="0 0 210 210" fill="none">
+              <rect width="210" height="210" rx="18" fill="#F4F4F4"/>
+              <rect x="20" y="20" width="50" height="50" fill="#0a8f61"/>
+              <rect x="30" y="30" width="30" height="30" fill="white"/>
+              <rect x="38" y="38" width="14" height="14" fill="#0a8f61"/>
+              <rect x="140" y="20" width="50" height="50" fill="#0a8f61"/>
+              <rect x="150" y="30" width="30" height="30" fill="white"/>
+              <rect x="158" y="38" width="14" height="14" fill="#0a8f61"/>
+              <rect x="20" y="140" width="50" height="50" fill="#0a8f61"/>
+              <rect x="30" y="150" width="30" height="30" fill="white"/>
+              <rect x="38" y="158" width="14" height="14" fill="#0a8f61"/>
+              <rect x="90" y="25" width="12" height="12" fill="#0a8f61"/>
+              <rect x="105" y="25" width="12" height="12" fill="#0a8f61"/>
+              <rect x="117" y="37" width="12" height="12" fill="#0a8f61"/>
+              <rect x="90" y="50" width="12" height="12" fill="#0a8f61"/>
+              <rect x="105" y="62" width="12" height="12" fill="#0a8f61"/>
+              <rect x="117" y="62" width="12" height="12" fill="#0a8f61"/>
+              <rect x="85" y="85" width="12" height="12" fill="#0a8f61"/>
+              <rect x="100" y="85" width="12" height="12" fill="#0a8f61"/>
+              <rect x="115" y="85" width="12" height="12" fill="#0a8f61"/>
+              <rect x="130" y="85" width="12" height="12" fill="#0a8f61"/>
+              <rect x="85" y="100" width="12" height="12" fill="#0a8f61"/>
+              <rect x="115" y="100" width="12" height="12" fill="#0a8f61"/>
+              <rect x="145" y="100" width="12" height="12" fill="#0a8f61"/>
+              <rect x="85" y="115" width="12" height="12" fill="#0a8f61"/>
+              <rect x="100" y="115" width="12" height="12" fill="#0a8f61"/>
+              <rect x="130" y="115" width="12" height="12" fill="#0a8f61"/>
+              <rect x="145" y="115" width="12" height="12" fill="#0a8f61"/>
+              <rect x="85" y="130" width="12" height="12" fill="#0a8f61"/>
+              <rect x="115" y="130" width="12" height="12" fill="#0a8f61"/>
+              <rect x="130" y="130" width="12" height="12" fill="#0a8f61"/>
+              <rect x="100" y="145" width="12" height="12" fill="#0a8f61"/>
+              <rect x="115" y="145" width="12" height="12" fill="#0a8f61"/>
+              <rect x="145" y="145" width="12" height="12" fill="#0a8f61"/>
+              <rect x="85" y="160" width="12" height="12" fill="#0a8f61"/>
+              <rect x="115" y="160" width="12" height="12" fill="#0a8f61"/>
+              <rect x="130" y="160" width="12" height="12" fill="#0a8f61"/>
+              <rect x="145" y="160" width="12" height="12" fill="#0a8f61"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="lover-card-balance">
+          <div class="lover-card-balance-row">
+            <span>🥙</span>
+            <strong>350 pts</strong>
+          </div>
+          <p>Saldo atual</p>
+        </div>
+      </div>
+
+      <div class="lover-card-help">
+        <h4>Como funciona</h4>
+        <p>Apresente este código QR no checkout. O caixa irá digitalizar para adicionar pontos à sua conta Joshua’s Lover.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM NAVBAR -->
+  <nav class="bottom-navbar">
+    <a href="index.html" class="nav-item">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <path d="M3 10.5L12 3L21 10.5V21H15V15H9V21H3V10.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+      <span>Início</span>
+    </a>
+
+    <a href="desafios.html" class="nav-item active">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <path d="M8 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M12 17V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M7 4H17V9C17 11.7614 14.7614 14 12 14C9.23858 14 7 11.7614 7 9V4Z" stroke="currentColor" stroke-width="2"/>
+        <path d="M7 6H4V8C4 10.2091 5.79086 12 8 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M17 6H20V8C20 10.2091 18.2091 12 16 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Desafios</span>
+    </a>
+
+    <a href="pedidos.html" class="nav-item">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <path d="M6 7H18L17 21H7L6 7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M9 7C9 4.79086 10.3431 3 12 3C13.6569 3 15 4.79086 15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M9 11H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Pedidos</span>
+    </a>
+
+    <a href="conta.html" class="nav-item">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+        <path d="M4 21C4 17.134 7.58172 14 12 14C16.4183 14 20 17.134 20 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Conta</span>
+    </a>
+  </nav>
+
+  <script>
+    const challengeTabs = document.querySelectorAll(".challenge-tab");
+    const challengeLists = document.querySelectorAll(".challenge-list");
+
+    challengeTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        challengeTabs.forEach((item) => item.classList.remove("active"));
+        challengeLists.forEach((list) => list.classList.remove("active"));
+
+        tab.classList.add("active");
+
+        const selectedList = document.getElementById(tab.dataset.tab);
+        selectedList.classList.add("active");
+      });
+    });
+
+    const loverCardWidget = document.getElementById("loverCardWidget");
+const loverCardModal = document.getElementById("loverCardModal");
+const closeLoverCard = document.getElementById("closeLoverCard");
+
+let loverCardCollapsed = sessionStorage.getItem("loverCardCollapsed") === "true";
+
+if (loverCardCollapsed) {
+  loverCardWidget.classList.remove("expanded");
+  loverCardWidget.classList.add("collapsed");
+}
+
+function collapseLoverCardOnFirstScroll() {
+  if (loverCardCollapsed) return;
+
+  loverCardWidget.classList.remove("expanded");
+  loverCardWidget.classList.add("collapsed");
+
+  loverCardCollapsed = true;
+  sessionStorage.setItem("loverCardCollapsed", "true");
+}
+
+window.addEventListener(
+  "scroll",
+  () => {
+    if (window.scrollY > 20) {
+      collapseLoverCardOnFirstScroll();
+    }
+  },
+  { passive: true }
+);
+
+loverCardWidget.addEventListener("click", () => {
+  loverCardModal.classList.add("active");
+  document.body.style.overflow = "hidden";
+});
+
+closeLoverCard.addEventListener("click", () => {
+  loverCardModal.classList.remove("active");
+  document.body.style.overflow = "auto";
+});
+
+
+  </script>
+</body>
+</html>

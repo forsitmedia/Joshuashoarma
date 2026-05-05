@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Conta | Joshua's Shoarma</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <main class="app-screen account-screen">
+
+    <!-- PROFILE HEADER -->
+    <section class="account-profile">
+      <div class="account-avatar">M</div>
+
+      <div>
+        <h1>Filippo</h1>
+
+        <div class="account-status-row">
+          <span>Joshua’s Lover</span>
+          <p>350 pts</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCOUNT -->
+    <section class="account-section">
+      <h2>CONTA</h2>
+
+      <div class="account-list">
+
+        <button class="account-row">
+          <span class="account-row-icon">👤</span>
+          <span>Informação Pessoal</span>
+          <strong>›</strong>
+        </button>
+
+        <button class="account-row">
+          <span class="account-row-icon">💳</span>
+          <span>Métodos de Pagamento</span>
+          <strong>›</strong>
+        </button>
+
+        <button class="account-row">
+          <span class="account-row-icon">🎁</span>
+          <span>As Minhas Recompensas</span>
+          <strong>›</strong>
+        </button>
+
+        <button class="account-row">
+          <span class="account-row-icon">♡</span>
+          <span>Favoritos</span>
+          <strong>›</strong>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- PREFERENCES -->
+    <section class="account-section">
+      <h2>PREFERÊNCIAS</h2>
+
+      <div class="account-list">
+
+        <button class="account-row">
+          <span class="account-row-icon">🔔</span>
+          <span>Notificações</span>
+          <strong>›</strong>
+        </button>
+
+        <button class="account-row">
+          <span class="account-row-icon">🛡️</span>
+          <span>Privacidade e Segurança</span>
+          <strong>›</strong>
+        </button>
+
+        <button class="account-row">
+          <span class="account-row-icon">⚙️</span>
+          <span>Definições</span>
+          <strong>›</strong>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section class="account-section">
+      <h2>SUPORTE</h2>
+
+      <div class="account-list">
+
+        <button class="account-row">
+          <span class="account-row-icon">?</span>
+          <span>Ajuda e FAQs</span>
+          <strong>›</strong>
+        </button>
+
+        <button class="account-row">
+          <span class="account-row-icon">📄</span>
+          <span>Termos e Políticas</span>
+          <strong>›</strong>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- LOGOUT -->
+    <button class="logout-button" id="openLogoutConfirm">
+      <span>↪</span>
+      Terminar Sessão
+    </button>
+
+    <p class="app-version">Versão 1.0.0</p>
+
+  </main>
+
+  <!-- LOGOUT CONFIRMATION -->
+  <div class="logout-confirm-overlay" id="logoutConfirmOverlay">
+    <div class="logout-confirm-box">
+      <h2>Terminar sessão?</h2>
+      <p>Tens a certeza que queres sair da tua conta Joshua’s Lover?</p>
+
+      <div class="logout-confirm-actions">
+        <button class="cancel-logout" id="cancelLogout">
+          Cancelar
+        </button>
+
+        <button class="confirm-logout">
+          Sim, terminar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING LOVER CARD -->
+  <button class="floating-lover-card expanded" id="loverCardWidget" aria-label="Abrir Joshua's Lover Card">
+    <span class="widget-card-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+        <path d="M7 10H10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M7 14H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </span>
+
+    <span class="widget-qr-icon">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+        <rect x="2" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/>
+        <rect x="17" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/>
+        <rect x="2" y="17" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/>
+        <rect x="11" y="11" width="2.5" height="2.5" fill="currentColor"/>
+        <rect x="15" y="11" width="2.5" height="2.5" fill="currentColor"/>
+        <rect x="11" y="15" width="2.5" height="2.5" fill="currentColor"/>
+        <rect x="18" y="15" width="2.5" height="2.5" fill="currentColor"/>
+        <rect x="15" y="18" width="2.5" height="2.5" fill="currentColor"/>
+      </svg>
+    </span>
+
+    <span class="lover-card-label">Joshua’s Lover Card</span>
+    <span class="lover-card-divider"></span>
+    <span class="lover-card-arrow">⌃</span>
+  </button>
+
+  <!-- LOVER CARD MODAL -->
+  <div class="lover-card-modal" id="loverCardModal">
+    <div class="lover-card-modal-screen">
+      <button class="lover-card-back" id="closeLoverCard">← Voltar</button>
+
+      <div class="lover-card-modal-header">
+        <div class="lover-card-modal-emoji">🥙</div>
+        <h2>Joshua’s Lover Card</h2>
+        <p>Mostre isto ao caixa para ganhar pontos</p>
+      </div>
+
+      <div class="lover-card-pass">
+        <h3>Mark</h3>
+        <p class="lover-card-tier">Joshua’s Lover</p>
+
+        <div class="lover-card-qr-frame">
+          <div class="lover-card-qr-box">
+            <svg width="210" height="210" viewBox="0 0 210 210" fill="none">
+              <rect width="210" height="210" rx="18" fill="#F4F4F4"/>
+
+              <rect x="20" y="20" width="50" height="50" fill="#0a8f61"/>
+              <rect x="30" y="30" width="30" height="30" fill="white"/>
+              <rect x="38" y="38" width="14" height="14" fill="#0a8f61"/>
+
+              <rect x="140" y="20" width="50" height="50" fill="#0a8f61"/>
+              <rect x="150" y="30" width="30" height="30" fill="white"/>
+              <rect x="158" y="38" width="14" height="14" fill="#0a8f61"/>
+
+              <rect x="20" y="140" width="50" height="50" fill="#0a8f61"/>
+              <rect x="30" y="150" width="30" height="30" fill="white"/>
+              <rect x="38" y="158" width="14" height="14" fill="#0a8f61"/>
+
+              <rect x="90" y="25" width="12" height="12" fill="#0a8f61"/>
+              <rect x="105" y="25" width="12" height="12" fill="#0a8f61"/>
+              <rect x="117" y="37" width="12" height="12" fill="#0a8f61"/>
+              <rect x="90" y="50" width="12" height="12" fill="#0a8f61"/>
+              <rect x="105" y="62" width="12" height="12" fill="#0a8f61"/>
+              <rect x="117" y="62" width="12" height="12" fill="#0a8f61"/>
+
+              <rect x="85" y="85" width="12" height="12" fill="#0a8f61"/>
+              <rect x="100" y="85" width="12" height="12" fill="#0a8f61"/>
+              <rect x="115" y="85" width="12" height="12" fill="#0a8f61"/>
+              <rect x="130" y="85" width="12" height="12" fill="#0a8f61"/>
+
+              <rect x="85" y="100" width="12" height="12" fill="#0a8f61"/>
+              <rect x="115" y="100" width="12" height="12" fill="#0a8f61"/>
+              <rect x="145" y="100" width="12" height="12" fill="#0a8f61"/>
+
+              <rect x="85" y="115" width="12" height="12" fill="#0a8f61"/>
+              <rect x="100" y="115" width="12" height="12" fill="#0a8f61"/>
+              <rect x="130" y="115" width="12" height="12" fill="#0a8f61"/>
+              <rect x="145" y="115" width="12" height="12" fill="#0a8f61"/>
+
+              <rect x="85" y="130" width="12" height="12" fill="#0a8f61"/>
+              <rect x="115" y="130" width="12" height="12" fill="#0a8f61"/>
+              <rect x="130" y="130" width="12" height="12" fill="#0a8f61"/>
+
+              <rect x="100" y="145" width="12" height="12" fill="#0a8f61"/>
+              <rect x="115" y="145" width="12" height="12" fill="#0a8f61"/>
+              <rect x="145" y="145" width="12" height="12" fill="#0a8f61"/>
+
+              <rect x="85" y="160" width="12" height="12" fill="#0a8f61"/>
+              <rect x="115" y="160" width="12" height="12" fill="#0a8f61"/>
+              <rect x="130" y="160" width="12" height="12" fill="#0a8f61"/>
+              <rect x="145" y="160" width="12" height="12" fill="#0a8f61"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="lover-card-balance">
+          <div class="lover-card-balance-row">
+            <span>🥙</span>
+            <strong>350 pts</strong>
+          </div>
+          <p>Saldo atual</p>
+        </div>
+      </div>
+
+      <div class="lover-card-help">
+        <h4>Como funciona</h4>
+        <p>Apresente este código QR no checkout. O caixa irá digitalizar para adicionar pontos à sua conta Joshua’s Lover.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM NAVBAR -->
+  <nav class="bottom-navbar">
+    <a href="index.html" class="nav-item">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <path d="M3 10.5L12 3L21 10.5V21H15V15H9V21H3V10.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+      <span>Início</span>
+    </a>
+
+    <a href="desafios.html" class="nav-item">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <path d="M8 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M12 17V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M7 4H17V9C17 11.7614 14.7614 14 12 14C9.23858 14 7 11.7614 7 9V4Z" stroke="currentColor" stroke-width="2"/>
+        <path d="M7 6H4V8C4 10.2091 5.79086 12 8 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M17 6H20V8C20 10.2091 18.2091 12 16 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Desafios</span>
+    </a>
+
+    <a href="pedidos.html" class="nav-item">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <path d="M6 7H18L17 21H7L6 7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M9 7C9 4.79086 10.3431 3 12 3C13.6569 3 15 4.79086 15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M9 11H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Pedidos</span>
+    </a>
+
+    <a href="conta.html" class="nav-item active">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+        <path d="M4 21C4 17.134 7.58172 14 12 14C16.4183 14 20 17.134 20 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Conta</span>
+    </a>
+  </nav>
+
+  <script>
+    const loverCardWidget = document.getElementById("loverCardWidget");
+    const loverCardModal = document.getElementById("loverCardModal");
+    const closeLoverCard = document.getElementById("closeLoverCard");
+
+    let loverCardCollapsed = sessionStorage.getItem("loverCardCollapsed") === "true";
+
+    if (loverCardCollapsed) {
+      loverCardWidget.classList.remove("expanded");
+      loverCardWidget.classList.add("collapsed");
+    }
+
+    function collapseLoverCardOnFirstScroll() {
+      if (loverCardCollapsed) return;
+
+      loverCardWidget.classList.remove("expanded");
+      loverCardWidget.classList.add("collapsed");
+
+      loverCardCollapsed = true;
+      sessionStorage.setItem("loverCardCollapsed", "true");
+    }
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (window.scrollY > 20) {
+          collapseLoverCardOnFirstScroll();
+        }
+      },
+      { passive: true }
+    );
+
+    loverCardWidget.addEventListener("click", () => {
+      loverCardModal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+
+    closeLoverCard.addEventListener("click", () => {
+      loverCardModal.classList.remove("active");
+      document.body.style.overflow = "auto";
+    });
+
+    const openLogoutConfirm = document.getElementById("openLogoutConfirm");
+    const logoutConfirmOverlay = document.getElementById("logoutConfirmOverlay");
+    const cancelLogout = document.getElementById("cancelLogout");
+
+    openLogoutConfirm.addEventListener("click", () => {
+      logoutConfirmOverlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+
+    cancelLogout.addEventListener("click", () => {
+      logoutConfirmOverlay.classList.remove("active");
+      document.body.style.overflow = "auto";
+    });
+
+    logoutConfirmOverlay.addEventListener("click", (event) => {
+      if (event.target === logoutConfirmOverlay) {
+        logoutConfirmOverlay.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Joshua's Shoarma</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <main class="login-screen">
+
+    <!-- DECORATIVE SHAPES -->
+    <div class="login-shape login-shape-top-right"></div>
+    <div class="login-shape login-shape-left"></div>
+    <div class="login-shape login-shape-bottom-right"></div>
+
+    <!-- STATUS BAR SPACE -->
+    <div class="login-top-space"></div>
+
+    <!-- BRAND -->
+    <section class="login-brand">
+      <div class="login-logo-circle">🥙</div>
+      <h1>Joshua’s</h1>
+      <p>Shoarma Lovers Club</p>
+    </section>
+
+    <!-- LOGIN TEXT -->
+    <section class="login-copy">
+      <h2>Insira o seu número para entrar novamente ou criar uma nova conta.</h2>
+    </section>
+
+    <!-- PHONE INPUT -->
+    <section class="login-phone-section">
+      <button class="country-code-button" id="countryCodeButton" type="button">
+        <span>🇵🇹</span>
+        <span>+351</span>
+        <span>⌄</span>
+      </button>
+
+      <button class="phone-input-button" id="openKeypad" type="button">
+        <span id="phonePlaceholder">Nº de telemóvel</span>
+      </button>
+    </section>
+
+   <!-- INFO -->
+<p class="login-help-text">
+  Enviaremos um código por SMS para iniciar sessão.
+</p>
+
+<div class="login-alt-access">
+  <button class="alt-access-button" type="button">Continuar com Email</button>
+  <button class="alt-access-button alt-google-button" type="button">Continuar com Google</button>
+</div>
+
+<!-- SUCCESS / FEEDBACK -->
+<div class="login-feedback" id="loginFeedback">
+  Código enviado por SMS para <strong id="sentNumber">+351</strong>
+</div>
+
+  </main>
+
+  <!-- KEYPAD OVERLAY -->
+  <div class="keypad-overlay" id="keypadOverlay">
+    <div class="keypad-sheet">
+      <div class="keypad-handle"></div>
+
+      <div class="keypad-sheet-header">
+        <p id="typedNumberDisplay">+351</p>
+      </div>
+
+      <div class="keypad-grid">
+        <button class="keypad-key" data-number="1">1</button>
+        <button class="keypad-key" data-number="2">2</button>
+        <button class="keypad-key" data-number="3">3</button>
+
+        <button class="keypad-key" data-number="4">4</button>
+        <button class="keypad-key" data-number="5">5</button>
+        <button class="keypad-key" data-number="6">6</button>
+
+        <button class="keypad-key" data-number="7">7</button>
+        <button class="keypad-key" data-number="8">8</button>
+        <button class="keypad-key" data-number="9">9</button>
+
+        <button class="keypad-key keypad-action" id="deleteDigit">⌫</button>
+        <button class="keypad-key" data-number="0">0</button>
+        <button class="keypad-key keypad-submit" id="submitPhone">→</button>
+      </div>
+
+      <button class="change-phone-link" type="button">
+        Mudei de nº telemóvel
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const openKeypad = document.getElementById("openKeypad");
+    const keypadOverlay = document.getElementById("keypadOverlay");
+    const keypadKeys = document.querySelectorAll(".keypad-key[data-number]");
+    const deleteDigit = document.getElementById("deleteDigit");
+    const submitPhone = document.getElementById("submitPhone");
+    const phonePlaceholder = document.getElementById("phonePlaceholder");
+    const typedNumberDisplay = document.getElementById("typedNumberDisplay");
+    const loginFeedback = document.getElementById("loginFeedback");
+    const sentNumber = document.getElementById("sentNumber");
+
+    let phoneDigits = "";
+
+    function formatPhoneNumber(digits) {
+      if (!digits) return "";
+      if (digits.length <= 3) return digits;
+      if (digits.length <= 6) return digits.slice(0, 3) + " " + digits.slice(3);
+      return digits.slice(0, 3) + " " + digits.slice(3, 6) + " " + digits.slice(6, 9);
+    }
+
+    function updatePhoneUI() {
+      if (phoneDigits.length === 0) {
+        phonePlaceholder.textContent = "Nº de telemóvel";
+        phonePlaceholder.classList.remove("filled");
+        typedNumberDisplay.textContent = "+351";
+      } else {
+        const formatted = formatPhoneNumber(phoneDigits);
+        phonePlaceholder.textContent = formatted;
+        phonePlaceholder.classList.add("filled");
+        typedNumberDisplay.textContent = "+351 " + formatted;
+      }
+
+      if (phoneDigits.length >= 9) {
+        submitPhone.classList.add("active");
+      } else {
+        submitPhone.classList.remove("active");
+      }
+    }
+
+    openKeypad.addEventListener("click", () => {
+      keypadOverlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+
+    keypadOverlay.addEventListener("click", (event) => {
+      if (event.target === keypadOverlay) {
+        keypadOverlay.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+    });
+
+    keypadKeys.forEach((key) => {
+      key.addEventListener("click", () => {
+        if (phoneDigits.length < 9) {
+          phoneDigits += key.dataset.number;
+          updatePhoneUI();
+        }
+      });
+    });
+
+    deleteDigit.addEventListener("click", () => {
+      phoneDigits = phoneDigits.slice(0, -1);
+      updatePhoneUI();
+    });
+
+    submitPhone.addEventListener("click", () => {
+  if (phoneDigits.length < 9) return;
+
+  const fullNumber = "+351 " + formatPhoneNumber(phoneDigits);
+  sentNumber.textContent = fullNumber;
+  loginFeedback.classList.add("show");
+
+  keypadOverlay.classList.remove("active");
+  document.body.style.overflow = "auto";
+
+  setTimeout(() => {
+    window.location.href = "otp.html?phone=" + encodeURIComponent(fullNumber);
+  }, 1200);
+});
+
+    updatePhoneUI();
+  </script>
+
+</body>
+</html>
